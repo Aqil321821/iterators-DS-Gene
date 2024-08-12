@@ -1,4 +1,4 @@
-const myMap = new Map();
+/* const myMap = new Map();
 
 myMap.set('name', 'John');
 myMap.set(1, 'blue');
@@ -15,16 +15,20 @@ console.log(myMap.has(3));
 
 myMap.delete(2);
 
-console.log(myMap);
+console.log(myMap); */
 
 const peopleMap = new Map();
 peopleMap.set('brad', { phone: '555-555-5555', email: 'brad@gmail.com' });
 peopleMap.set('jack', { phone: '555-555-5555', email: 'jack@gmail.com' });
 peopleMap.set('jill', { phone: '555-555-5555', email: 'jill@gmail.com' });
 
-peopleMap.forEach((person) => console.log(person.email));
+peopleMap.forEach((person,index) => console.log(person.email,index));
+peopleMap.forEach((person,index) => console.log(index));
 
-console.log(peopleMap.keys());
+
+peopleMap.forEach((value,key)=>console.log(key));
+
+/* console.log(peopleMap.keys());
 console.log(peopleMap.values());
 console.log(peopleMap.entries());
 
@@ -36,4 +40,7 @@ console.log(iterator.next());
 console.log(iterator.next());
 
 const peopleArray = Array.from(peopleMap);
-console.log(peopleArray);
+console.log(peopleArray); */
+
+
+// console.log(peopleMap);
