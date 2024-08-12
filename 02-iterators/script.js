@@ -14,6 +14,9 @@
 //   },
 // };
 
+
+//We can call the next() function to get the next team in the sequence
+
 // console.log(app.next());
 // console.log(app.next());
 // console.log(app.next());
@@ -21,8 +24,20 @@
 // console.log(app.next());
 
 
+//==>  even though its name is iterator but its not iterable
+/* for (const team of app) {
 
-//with symbol.iterator
+
+  console.log(team);
+  
+} */
+
+//error app is not iterable
+
+
+
+
+//==>with symbol.iterator
 
 const app = {
   teams: ['Red Sox', 'Yankees', 'Astros', 'Dodgers'],
@@ -39,12 +54,26 @@ const app = {
 };
 
 const iterator = app[Symbol.iterator]();
+
+
+
+
+
 // console.log(iterator.next().value);
 // console.log(iterator.next().value);
 // console.log(iterator.next().value);
 // console.log(iterator.next().value);
 // console.log(iterator.next());
 
+//we call the function
+//app[Symbol.iterator](): Calls the [Symbol.iterator] method on the app object to get an iterator.
+
+
+
+
 for (const team of app) {
   console.log(team);
 }
+
+
+//every iterator is not iterable ...to make it iterable we have to make it manually

@@ -1,0 +1,9 @@
+# Well-Known Symbols:
+There are some well-known symbols, also called 'built-in symbols' that are used by JavaScript engines
+to provide certain language features and are shared by all built-in objects. For example,
+Symbol.iterator is utilized to iterate over items in arrays, strings, or even to define your own iterator
+function
+
+You can actually see all of the built-in symbols by running the following code:
+console.log(Object.getOwnPropertyNames(Symbol));
+

@@ -1,0 +1,41 @@
+An iterator is an object that defines a sequence and potentially a return value upon completion. It's
+an object that implements the iterator protocol by having a next() method. The next() method
+returns an object with two properties: value and done . The value property is the value of the next
+item in the sequence. The done property is a boolean that is true if the iterator is done with its
+sequence.
+
+
+[Symbol.iterator] :
+JavaScript mein ek special property hai 
+jo kisi object ko iterable banane ke liye use hoti hai.
+ Iska use karke aap ek object ko iteration ke liye define kar sakte hain, 
+ taki  us object ke elements ko easily traverse (loop) kar sakein.
+
+
+
+  return {
+      next: () => {
+        return nextIndex < this.teams.length
+          ? { value: this.teams[nextIndex++], done: false }
+          : { done: true };
+      }
+
+ ==> this return an object that has a next function and that function checks if we r on last value if not 
+ we return an object that has value and done : false 
+ else if we r done return an object with value done : true.
+
+
+
+
+ ==>Iterator ko iterable banane ke liye, aapko kuch specific steps follow karne honge.
+  Basically, aapko ensure karna hoga ke object Symbol.iterator method ko implement karta hai, 
+  jo ek iterator object return karta hai. Yani, iterable banane ke liye:     
+
+  1.Object ko define karen aur usme [Symbol.iterator] method implement karen.
+  2.[Symbol.iterator] method ko define karen jo ek iterator object return karega.
+  3.Iterator object ko define karen jo next() method ko implement karega.
+   next() method ko sequentially values provide karni chahiye aur done property ke sath indicate karni chahiye
+    ke iteration complete hui ya nahi.
+
+
+    
